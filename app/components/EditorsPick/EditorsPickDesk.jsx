@@ -8,7 +8,7 @@ import Pic4 from "@/app/assets/filter4.png";
 
 const EditorsPickDesk = () => {
   return (
-    <div className="tw-hidden md:tw-block tw-flex  ">
+    <div className="tw-hidden md:tw-block">
       <div>
         <h1 className="tw-text-[#252B42]">EDITOR&quot;S PICK</h1>
         <p className="tw-text-[#737373]">
