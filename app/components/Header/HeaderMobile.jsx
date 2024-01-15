@@ -10,7 +10,7 @@ import {
 import { Menu, Search, ShoppingCart } from "lucide-react";
 import { useState } from "react";
 import { NAVIGATIONS } from "./Header";
-import { Link } from "@mui/material";
+import Link from "next/link";
 
 const HeaderMobile = () => {
   const [openMenu, setOpenMenu] = useState(false);
@@ -39,14 +39,14 @@ const HeaderMobile = () => {
         <List>
           {NAVIGATIONS.map((item) => (
             <Link
-              key={item.title}
               href={item.href}
-              className="tw-no-underline hover:tw-cursor "
+              key={item.title}
+              className="tw-no-underline hover:tw-cursor"
             >
-              <ListItem className="tw-text-center" LinkComponent={Link}>
+              <ListItem className="tw-text-center">
                 <ListItemText
                   primary={item.title}
-                  className="tw-text-[#737373] hover:tw-text-[#424242]"
+                  className="tw-text-[#737373]  hover:tw-text-[#424242]"
                 />
               </ListItem>
             </Link>

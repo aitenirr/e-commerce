@@ -1,10 +1,24 @@
+import ProductCard from "@/app/components/ProductCard/ProductCard";
 import Image from "next/image";
-import foto from "./assets/hero1.png";
-import ProductCardMobile from "./components/ProductCard/ProductCardMobile";
-import ProductCardDesktop from "./components/ProductCard/ProductCardDesktop";
-import ProductCard from "./components/ProductCard/ProductCard";
 import Photo1 from "@/app/assets/product-cover-5.png";
 import Posts from "./(components)/Posts";
+import VitaClassic from "@/app/components/VitaClassic/VitaClassic";
+import Part from "@/app/components/ Part/ Part";
+import Footer from "./components/Footer";
+import MainOne from "./components/MainOne";
+import MainOneMobile from "./components/MainOneMobile";
+import EditorsPick from "./components/EditorsPick/EditorsPick";
+import Photo2 from "@/app/assets/product-cover-6.png";
+import Photo3 from "@/app/assets/product-cover-7.png";
+
+import Photo4 from "@/app/assets/product-cover-8.png";
+
+import Photo5 from "@/app/assets/product-cover-9.png";
+
+import Photo6 from "@/app/assets/product-cover-10.png";
+import Photo7 from "@/app/assets/product-cover-11.png";
+import Photo8 from "@/app/assets/product-cover-12.png";
+
 const products = [
   {
     id: 1,
@@ -20,7 +34,7 @@ const products = [
     category: "English Department",
     price: 16.48,
     discountPrice: 6.48,
-    photo: Photo1,
+    photo: Photo2,
   },
   ,
   {
@@ -29,7 +43,7 @@ const products = [
     category: "English Department",
     price: 16.48,
     discountPrice: 6.48,
-    photo: Photo1,
+    photo: Photo3,
   },
   ,
   {
@@ -38,7 +52,7 @@ const products = [
     category: "English Department",
     price: 16.48,
     discountPrice: 6.48,
-    photo: Photo1,
+    photo: Photo4,
   },
   ,
   {
@@ -47,7 +61,7 @@ const products = [
     category: "English Department",
     price: 16.48,
     discountPrice: 6.48,
-    photo: Photo1,
+    photo: Photo5,
   },
   ,
   {
@@ -56,7 +70,7 @@ const products = [
     category: "English Department",
     price: 16.48,
     discountPrice: 6.48,
-    photo: Photo1,
+    photo: Photo6,
   },
   ,
   {
@@ -65,7 +79,7 @@ const products = [
     category: "English Department",
     price: 16.48,
     discountPrice: 6.48,
-    photo: Photo1,
+    photo: Photo7,
   },
   {
     id: 8,
@@ -73,14 +87,18 @@ const products = [
     category: "English Department",
     price: 16.48,
     discountPrice: 6.48,
-    photo: Photo1,
+    photo: Photo8,
   },
 ];
+
 export default function Home() {
   return (
     <main>
-      <Image src={foto} alt="lkjh" className="tw-h-full tw-w-full" />
-      <section className="tw-px-9 md:tw-px-36 tw-flex tw-flex-col md:tw-gap-y-8">
+      <MainOne />
+      <MainOneMobile />
+      <EditorsPick />
+
+      <section className="tw-mt-[200px] tw-px-9 md:tw-px-36 tw-flex tw-flex-col md:tw-gap-y-8">
         <div className="tw-text-center">
           <p>Featured Products</p>
           <h2>BESTSELLER PRODUCTS</h2>
@@ -93,7 +111,10 @@ export default function Home() {
           ))}
         </div>
       </section>
+      <VitaClassic />
+      <Part />
       <Posts />
+      <Footer />
     </main>
   );
 }

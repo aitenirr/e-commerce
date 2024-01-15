@@ -2,22 +2,25 @@ import Post from "@/app/components/Post";
 
 const Posts = () => {
   return (
-    <div className="md:tw-px-48 md:tw-pt-40">
-      <div>
-        <p>Practice Advice</p>
-        <h1>Featured Posts</h1>
-        <p>
-          Problems trying to resolve the conflict between the two major realms
-          of Classical physics: Newtonian mechanics{" "}
+    <section className="md:tw-px-[70px] ">
+      <div className="tw-flex tw-flex-col tw-text-center">
+        <h5 className="tw-text-[14px] tw-font-bold tw-text-[#23A6F0] tw-pt-20 ">
+          Practice Advice
+        </h5>
+        <h1 className=" tw-font-bold  tw-pt-4 tw-pb-4">
+          Featured <br /> Posts
+        </h1>
+        <p className=" tw-text-[14px] tw-font-normal tw-text-[#737373] tw-pb-5">
+          Problems trying to resolve the conflict between <br /> the two major
+          realms of Classical physics: Newtonian mechanics
         </p>
       </div>
-
-      <div className="tw-flex tw-gap-x-2.5">
+      <div className=" tw-gap-x-[50px] tw-flex tw-flex-col md:tw-flex  md:tw-flex-row">
         <Post />
         <Post />
         <Post />
       </div>
-    </div>
+    </section>
   );
 };
 

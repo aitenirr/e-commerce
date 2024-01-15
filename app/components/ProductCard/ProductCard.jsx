@@ -1,13 +1,11 @@
-import ProductCardDesktop from "./ProductCardDesktop";
-import ProductCardMobile from "./ProductCardMobile";
+import ProductCardDes from "./ProductCardDes";
+import ProductCardMob from "./ProductCardMob";
 
-const ProductCard = ({ product }) => {
+export default function ProductCard({ product }) {
   return (
     <div>
-      <ProductCardMobile />
-      <ProductCardDesktop product={product} />
+      <ProductCardMob product={product} />
+      <ProductCardDes product={product} />
     </div>
   );
-};
-
-export default ProductCard;
+}

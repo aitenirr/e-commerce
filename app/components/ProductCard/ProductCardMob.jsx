@@ -1,17 +1,19 @@
+"use client";
+
 import Image from "next/image";
 import { IconButton } from "@mui/material";
 import { Circle } from "lucide-react";
 
-const ProductCardDesktop = ({ product }) => {
+const ProductCardMob = ({ product }) => {
   return (
-    <div className="tw-hidden md:tw-flex tw-flex-col tw-gap-y-6 tw-basis-1/4">
+    <div className="tw-flex md:tw-hidden tw-flex-col tw-pb-7 ">
       <Image
         src={product.photo}
         alt="photo"
         height="100%"
         className="tw-h-[427px]"
       />
-      <div className="tw-flex tw-flex-col tw-items-center tw-gap-y-2.5">
+      <div className="tw-flex tw-flex-col tw-items-center tw-gap-y-2.5 tw-pt-6">
         <p className="tw-text-base tw-font-bold">{product.title}</p>
         <p className="tw-text-sm tw-font-bold tw-text-[#737373]">
           {product.category}
@@ -37,7 +39,11 @@ const ProductCardDesktop = ({ product }) => {
         </div>
       </div>
     </div>
+
+    // <div className="tw-h-[500px] tw-relative tw-block md:tw-hidden">
+    //   <Image src={Photo} alt="photo" />
+    // </div>
   );
 };
 
-export default ProductCardDesktop;
+export default ProductCardMob;
