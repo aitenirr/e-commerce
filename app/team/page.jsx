@@ -3,7 +3,10 @@ import axios from "axios";
 const TeamPage = async () => {
   const response = await axios.get("https://dummyjson.com/users");
   const { users } = response.data;
-  console.log("users: ", users);
+
+  if (!response) {
+    return notFound();
+  }
 
   return (
     <div
